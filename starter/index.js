@@ -68,12 +68,10 @@ function init() {
     const generatedMarkdown = generateMarkdown(answers);
     const outputFileName = path.join(__dirname, "output", "README.md");
 
-      // Ensure the output directory exists
     if (!fs.existsSync(path.dirname(outputFileName))) {
         fs.mkdirSync(path.dirname(outputFileName), { recursive: true });
     }
 
-      // Write the generated README file
     writeToFile(outputFileName, generatedMarkdown);
 
     console.log('README.md successfully generated!');
