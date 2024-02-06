@@ -48,4 +48,12 @@ function generateLicenseBadge(license) {
   }
 }
 
+function generateLicenseNotice(license) {
+  if (license === 'None') {
+    return 'This project is not licensed.';
+  } else {
+    return `This project is licensed under the [${license}](https://opensource.org/licenses/${license}) license.`;
+  }
+}
+
 module.exports = generateMarkdown;
