@@ -1,7 +1,9 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  
+  const licenseBadge = generateLicenseBadge(data.license);
   return `# ${data.title}
+
+  ${licenseBadge} 
 
   ## Description
   ${data.description}
